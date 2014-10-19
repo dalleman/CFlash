@@ -1,5 +1,5 @@
 {
-    "name": "dalle/cflash",    
+    "name": "dalle/flash",    
     "type": "library",
     "description": "PHP classes for database handling upon PDO",
     "keywords": ["module", "framework", "mvc", "micro", "education"],
@@ -14,6 +14,6 @@
         "php": ">=5.4"
     },
     "autoload": {
-        "psr-4": { "Dalle\\": "src/" }
+        "psr-4": { "dalle\\": "src/" }
     }
 }
