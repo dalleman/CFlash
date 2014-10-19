@@ -1,5 +1,5 @@
 {
-    "name": "dalle/flash",    
+    "name": "dalle/cflash",    
     "type": "library",
     "description": "PHP classes for database handling upon PDO",
     "keywords": ["module", "framework", "mvc", "micro", "education"],
