@@ -25,10 +25,10 @@ class CFlash
      * Print flash message.
      *
      */
-    public function print()
+    public function printMessage()
     {
         if(!is_null($_SESSION['CFlashMessage'])) {
-        	echo "<div class='cflash'>$_SESSION['CFlashMessage']</div>";
+        	echo "<div class='cflash'>" . $_SESSION['CFlashMessage'] . "</div>";
 					$_SESSION['CFlashMessage'] = null;
         }
     }
