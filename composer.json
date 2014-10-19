@@ -1,0 +1,19 @@
+{
+    "name": "dalle/cflash",    
+    "type": "library",
+    "description": "PHP classes for database handling upon PDO",
+    "keywords": ["module", "framework", "mvc", "micro", "education"],
+    "authors": [
+        {
+            "name": "Dalle Babic",
+            "email": "dalleb@kth.se",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { "Dalle\\": "src/" }
+    }
+}
