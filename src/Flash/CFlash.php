@@ -8,6 +8,7 @@ namespace Dalle\Flash;
  */
 class CFlash
 {
+
 		/**
      * Input message to be shown on next page into $_Session.
      *
@@ -25,7 +26,7 @@ class CFlash
      * @param string $message containing message to be displayed on next page.
      *
      */
-		public function warning($message) {
+		public function warning($message = '') {
 			$this->insert($message, 'yellow');
 		}
 		
@@ -35,7 +36,7 @@ class CFlash
      * @param string $message containing message to be displayed on next page.
      *
      */
-		public function error($message) {
+		public function error($message = '') {
 			$this->insert($message, 'red');
 		}
 		
@@ -45,7 +46,7 @@ class CFlash
      * @param string $message containing message to be displayed on next page.
      *
      */
-		public function success($message) {
+		public function success($message = '') {
 			$this->insert($message, 'blue');
 		}
 		
