@@ -1,5 +1,6 @@
 CFLASH
 =====
+[![Build Status](https://travis-ci.org/dalleman/CFlash.svg?branch=master)](https://travis-ci.org/dalleman/CFlash)
 
 The cflash class will be loaded using psr-4 protocols installing with packagist.
 
