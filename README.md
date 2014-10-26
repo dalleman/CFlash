@@ -2,6 +2,7 @@ CFLASH
 =====
 [![Build Status](https://travis-ci.org/dalleman/CFlash.svg?branch=master)](https://travis-ci.org/dalleman/CFlash)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dalleman/CFlash/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dalleman/CFlash/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/dalleman/CFlash/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/dalleman/CFlash/?branch=master)
 
 The cflash class will be loaded using psr-4 protocols installing with packagist.
 
