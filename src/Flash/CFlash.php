@@ -6,8 +6,9 @@ namespace Dalle\Flash;
  * Database wrapper, provides a database API for the framework but hides details of implementation.
  *
  */
-class CFlash
+class CFlash implements \Anax\DI\IInjectionAware  
 {
+	use \Anax\DI\TInjectable;  
 
 		/**
      * Input message to be shown on next page into $_Session.
@@ -17,7 +18,10 @@ class CFlash
      */
     private function insert($message = '', $color = 'yellow')
     {
-			$_SESSION['CFlashMessage'] = "<div class='cflash' style='background-color: $color;'>" . $message . "</div>";
+			$this->session = new \Anax\Session\CSession();
+			
+			
+			$this->session->set('CFlashMessage', "<div class='cflash' style='background-color: $color;'>" . $message . "</div>");
     }
 		
 		/**
@@ -26,7 +30,7 @@ class CFlash
      * @param string $message containing message to be displayed on next page.
      *
      */
-		public function warning($message = '') {
+		public function warning($message) {
 			$this->insert($message, 'yellow');
 		}
 		
@@ -36,7 +40,7 @@ class CFlash
      * @param string $message containing message to be displayed on next page.
      *
      */
-		public function error($message = '') {
+		public function error($message) {
 			$this->insert($message, 'red');
 		}
 		
@@ -46,7 +50,7 @@ class CFlash
      * @param string $message containing message to be displayed on next page.
      *
      */
-		public function success($message = '') {
+		public function success($message) {
 			$this->insert($message, 'blue');
 		}
 		
@@ -59,9 +63,10 @@ class CFlash
      */
     public function printMessage()
     {
-        if(!is_null($_SESSION['CFlashMessage'])) {
-        	echo $_SESSION['CFlashMessage'];
-					$_SESSION['CFlashMessage'] = null;
+				$this->session = new \Anax\Session\CSession();
+        if($this->session->has('CFlashMessage')) {
+        	echo $this->session->get('CFlashMessage');
+					$this->session->set('CFlashMessage', null);
         }
     }
 }
